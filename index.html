@@ -31,18 +31,54 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             border-left: 6px solid #4A90E2;
             transition: transform 0.2s ease;
+            position: relative;
         }
         .card:hover {
             transform: translateY(-2px);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f2f5;
         }
         .question-title {
             font-size: 1.2rem;
             font-weight: bold;
             color: #2c3e50;
-            margin-top: 0;
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #f0f2f5;
+            margin: 0;
+        }
+        .edit-btn {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: background-color 0.2s;
+        }
+        .edit-btn:hover {
+            background-color: #357ABD;
+        }
+        .edit-btn.editing {
+            background-color: #e74c3c;
+        }
+        .edit-btn.editing:hover {
+            background-color: #c0392b;
+        }
+        .script-text {
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .script-text[contenteditable="true"] {
+            border: 2px dashed #4A90E2;
+            padding: 15px;
+            background-color: #f8fbff;
+            outline: none;
         }
         .script-text p {
             margin-bottom: 12px;
@@ -60,7 +96,10 @@
     <h1>📝 공통영어 I 말하기 수행평가 대본</h1>
 
     <div class="card">
-        <div class="question-title">[ Question 1 ] 대기업가들: 산업의 리더 vs 강도 귀족</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 1 ] 대기업가들: 산업의 리더 vs 강도 귀족</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I believe Andrew Carnegie should be remembered as an industrious captain of industry rather than a robber baron. I have three specific reasons for this.</p>
             <p><span class="keyword">First</span>, he significantly drove national economic growth. By revolutionizing the steel industry, he provided the essential materials needed to build modern American cities and railroads.</p>
@@ -71,7 +110,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 2 ] 반 고흐 작품 소개 (별이 빛나는 밤)</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 2 ] 반 고흐 작품 소개 (별이 빛나는 밤)</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I would like to talk about Vincent van Gogh’s masterpiece, The Starry Night.</p>
             <p><span class="keyword">First</span>, the main theme of this painting is finding hope and light in the midst of darkness. It reflects his inner emotional struggles but also his enduring hope.</p>
@@ -82,7 +124,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 3 ] 수전 손택의 현재 영화계에 대한 의견</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 3 ] 수전 손택의 현재 영화계에 대한 의견</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>If Susan Sontag observed the present filmdom, she would likely conclude that it is primarily industrial rather than artistic. I support this with three reasons.</p>
             <p><span class="keyword">First</span>, modern cinema is dominated by the pursuit of box-office profit. Major studios prioritize guaranteed blockbusters, like superhero franchises, over unique, risky artistic films.</p>
@@ -93,7 +138,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 4 ] 노숙인 지원에 대한 사회의 책임 여부</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 4 ] 노숙인 지원에 대한 사회의 책임 여부</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I strongly agree that society is responsible for helping people who become homeless. Here are my three main reasons.</p>
             <p><span class="keyword">First</span>, homelessness is often a systemic issue, not just an individual failure. Economic recessions, inflation, and a lack of affordable housing push many vulnerable people onto the streets.</p>
@@ -104,7 +152,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 5 ] 고통스러운 기억 삭제 vs 개인의 성장</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 5 ] 고통스러운 기억 삭제 vs 개인의 성장</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I believe painful memories are important for personal growth and should not be erased, even if technology allows it. I have three reasons for my opinion.</p>
             <p><span class="keyword">First</span>, painful memories act as a warning system that prevents us from repeating mistakes. For example, the painful memory of failing my math midterm last year forced me to change my study habits completely.</p>
@@ -115,7 +166,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 6 ] 행복한 삶: 좋은 기억 vs 나쁜 기억</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 6 ] 행복한 삶: 좋은 기억 vs 나쁜 기억</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>For a happy life, I believe remembering positive experiences is more important than merely forgetting negative ones. There are three reasons for this.</p>
             <p><span class="keyword">First</span>, positive memories provide emotional fuel during difficult times. When I am exhausted from late-night studying, recalling the joy of my family's summer vacation gives me the energy to keep going.</p>
@@ -126,7 +180,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 7 ] 인간의 기억을 완전히 신뢰할 수 있는가</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 7 ] 인간의 기억을 완전히 신뢰할 수 있는가</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I do not think human memory can be trusted completely. I have three specific reasons based on scientific facts and personal experience.</p>
             <p><span class="keyword">First</span>, our memories are easily distorted by strong emotions. When we are highly stressed or excited, our brain often exaggerates or alters the details of an event.</p>
@@ -137,7 +194,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 8 ] 가장 좋은 영어 공부 방법</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 8 ] 가장 좋은 영어 공부 방법</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I consider reading English books and articles to be the best method of studying English. I support this with three reasons.</p>
             <p><span class="keyword">First</span>, reading allows you to learn vocabulary naturally in context. Instead of memorizing boring word lists, seeing how words are actually used in a story makes them unforgettable.</p>
@@ -148,7 +208,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 9 ] 온라인 수업 vs 전통적 교실 수업</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 9 ] 온라인 수업 vs 전통적 교실 수업</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I prefer traditional classrooms over online courses because they offer a more comprehensive learning environment. I have three main reasons.</p>
             <p><span class="keyword">First</span>, traditional classrooms provide immediate feedback. When I struggled with a complex math formula, my teacher explained it again on the spot, unlike online courses where I must wait for an email reply.</p>
@@ -159,7 +222,10 @@
     </div>
 
     <div class="card">
-        <div class="question-title">[ Question 10 ] 학교의 봉사활동 의무화 찬반</div>
+        <div class="card-header">
+            <div class="question-title">[ Question 10 ] 학교의 봉사활동 의무화 찬반</div>
+            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
+        </div>
         <div class="script-text">
             <p>I believe it is not good for schools to make volunteer work mandatory. I have three reasons to support my opposition.</p>
             <p><span class="keyword">First</span>, making it mandatory destroys the intrinsic meaning of "volunteering." True charity must come from a willing heart, but forcing it turns a meaningful act into a mechanical requirement.</p>
@@ -170,6 +236,30 @@
     </div>
 
 </div>
+
+<script>
+    function toggleEdit(btn) {
+        // 버튼이 속한 카드의 내용 영역 찾기
+        const card = btn.closest('.card');
+        const textBox = card.querySelector('.script-text');
+        
+        // 현재 편집 모드인지 확인
+        const isEditing = textBox.getAttribute('contenteditable') === 'true';
+        
+        if (isEditing) {
+            // 편집 완료 및 저장
+            textBox.setAttribute('contenteditable', 'false');
+            btn.textContent = '편집하기';
+            btn.classList.remove('editing');
+        } else {
+            // 편집 모드로 전환
+            textBox.setAttribute('contenteditable', 'true');
+            textBox.focus();
+            btn.textContent = '저장하기';
+            btn.classList.add('editing');
+        }
+    }
+</script>
 
 </body>
 </html>
