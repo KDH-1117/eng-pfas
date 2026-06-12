@@ -95,7 +95,7 @@
 <div class="container">
     <h1>📝 공통영어 I 말하기 수행평가 대본</h1>
 
-    <div class="card">
+    <div class="card" data-id="q1">
         <div class="card-header">
             <div class="question-title">[ Question 1 ] 대기업가들: 산업의 리더 vs 강도 귀족</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -109,7 +109,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q2">
         <div class="card-header">
             <div class="question-title">[ Question 2 ] 반 고흐 작품 소개 (별이 빛나는 밤)</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -123,7 +123,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q3">
         <div class="card-header">
             <div class="question-title">[ Question 3 ] 수전 손택의 현재 영화계에 대한 의견</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -137,7 +137,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q4">
         <div class="card-header">
             <div class="question-title">[ Question 4 ] 노숙인 지원에 대한 사회의 책임 여부</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -151,7 +151,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q5">
         <div class="card-header">
             <div class="question-title">[ Question 5 ] 고통스러운 기억 삭제 vs 개인의 성장</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -165,7 +165,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q6">
         <div class="card-header">
             <div class="question-title">[ Question 6 ] 행복한 삶: 좋은 기억 vs 나쁜 기억</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -179,7 +179,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q7">
         <div class="card-header">
             <div class="question-title">[ Question 7 ] 인간의 기억을 완전히 신뢰할 수 있는가</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -193,7 +193,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q8">
         <div class="card-header">
             <div class="question-title">[ Question 8 ] 가장 좋은 영어 공부 방법</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -207,7 +207,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q9">
         <div class="card-header">
             <div class="question-title">[ Question 9 ] 온라인 수업 vs 전통적 교실 수업</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -221,7 +221,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-id="q10">
         <div class="card-header">
             <div class="question-title">[ Question 10 ] 학교의 봉사활동 의무화 찬반</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
@@ -238,12 +238,28 @@
 </div>
 
 <script>
+    // 페이지가 로드될 때 로컬 스토리지에서 저장된 데이터를 불러오는 함수
+    window.onload = function() {
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(card => {
+            const id = card.getAttribute('data-id');
+            const textBox = card.querySelector('.script-text');
+            const savedContent = localStorage.getItem('englishScript_' + id);
+            
+            // 저장된 내용이 있으면 불러와서 적용
+            if (savedContent) {
+                textBox.innerHTML = savedContent;
+            }
+        });
+    };
+
+    // 편집 및 저장 기능 토글 함수
     function toggleEdit(btn) {
-        // 버튼이 속한 카드의 내용 영역 찾기
         const card = btn.closest('.card');
+        const id = card.getAttribute('data-id');
         const textBox = card.querySelector('.script-text');
         
-        // 현재 편집 모드인지 확인
         const isEditing = textBox.getAttribute('contenteditable') === 'true';
         
         if (isEditing) {
@@ -251,6 +267,10 @@
             textBox.setAttribute('contenteditable', 'false');
             btn.textContent = '편집하기';
             btn.classList.remove('editing');
+            
+            // 로컬 스토리지에 변경된 내용 저장
+            localStorage.setItem('englishScript_' + id, textBox.innerHTML);
+            alert("수정된 내용이 저장되었습니다. (새로고침해도 유지됩니다!)");
         } else {
             // 편집 모드로 전환
             textBox.setAttribute('contenteditable', 'true');
