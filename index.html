@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공통영어 I 말하기 수행평가 대본</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* 모든 요소에 폰트를 강제로 적용 (!important) */
+        * {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif !important;
+        }
         body {
-            font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
             background-color: #f4f7f6;
             color: #333;
             line-height: 1.7;
@@ -58,7 +64,6 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.9rem;
-            font-family: inherit;
             transition: background-color 0.2s;
         }
         .edit-btn:hover {
@@ -109,45 +114,17 @@
         </div>
     </div>
 
-    <div class="card" data-id="q2">
-        <div class="card-header">
-            <div class="question-title">[ Question 2 ] 반 고흐 작품 소개 (별이 빛나는 밤)</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>I would like to talk about Vincent van Gogh’s masterpiece, The Starry Night.</p>
-            <p><span class="keyword">First of all</span>, the main theme of this painting is finding hope and light in the midst of darkness. It reflects his inner emotional struggles but also his enduring hope.</p>
-            <p><span class="keyword">Moreover</span>, regarding his techniques, Van Gogh used a method called impasto. He applied very thick layers of paint and used aggressive, swirling brushstrokes to make the night sky look dynamic and alive, rather than still.</p>
-            <p><span class="keyword">Lastly</span>, my personal thought is that this painting is deeply comforting. Whenever I feel overwhelmed by high school exams and stress, looking at those bright, swirling yellow stars reminds me that beautiful things can emerge from difficult times.</p>
-            <p><span class="keyword">For these reasons</span>, its profound theme, unique technique, and comforting energy make it my favorite painting.</p>
-        </div>
-    </div>
-
-    <div class="card" data-id="q3">
-        <div class="card-header">
-            <div class="question-title">[ Question 3 ] 수전 손택의 현재 영화계에 대한 의견</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>If Susan Sontag observed the present filmdom, she would likely conclude that it is primarily industrial rather than artistic. I support this with three reasons.</p>
-            <p><span class="keyword">First of all</span>, modern cinema is dominated by the pursuit of box-office profit. Major studios prioritize guaranteed blockbusters, like superhero franchises, over unique, risky artistic films.</p>
-            <p><span class="keyword">Moreover</span>, movies rely heavily on standardized formulas. Instead of original storytelling, we see repetitive plots and an overuse of CGI to easily attract mass audiences.</p>
-            <p><span class="keyword">Lastly</span>, independent films struggle to survive. I recently wanted to watch a small indie art film, but no local theaters were showing it because they were fully booked with big commercial movies.</p>
-            <p><span class="keyword">For these reasons</span>, because financial gain and mass production heavily outweigh artistic originality and accessibility, Sontag would view today's filmdom as a massive industry.</p>
-        </div>
-    </div>
-
     <div class="card" data-id="q4">
         <div class="card-header">
             <div class="question-title">[ Question 4 ] 노숙인 지원에 대한 사회의 책임 여부</div>
             <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
         </div>
         <div class="script-text">
-            <p>I strongly agree that society is responsible for helping people who become homeless. Here are my three main reasons.</p>
-            <p><span class="keyword">First of all</span>, homelessness is often a systemic issue, not just an individual failure. Economic recessions, inflation, and a lack of affordable housing push many vulnerable people onto the streets.</p>
-            <p><span class="keyword">Moreover</span>, society has a duty to provide healthcare. Many homeless individuals suffer from untreated physical or mental illnesses, and a compassionate society must offer medical support.</p>
-            <p><span class="keyword">Lastly</span>, helping them benefits the entire community. When I participated in a soup kitchen volunteer program, I realized that providing support and job training helps them reintegrate into society, which ultimately reduces crime and creates safer neighborhoods.</p>
-            <p><span class="keyword">For these reasons</span>, society must take responsibility for the homeless to ensure a safer and more compassionate community for everyone.</p>
+            <p>I strongly agree that society is responsible for helping homeless people. I have three logical reasons for this.</p>
+            <p><span class="keyword">First of all</span>, homelessness is primarily a systemic economic issue rather than just a personal failure. Severe inflation and a lack of affordable housing push many ordinary workers onto the streets after sudden job losses or medical emergencies.</p>
+            <p><span class="keyword">Moreover</span>, leaving the homeless without support creates greater financial burdens for the community. Studies show that providing basic housing and preventive healthcare is actually cheaper for the government than paying for their frequent emergency room visits and law enforcement costs.</p>
+            <p><span class="keyword">Lastly</span>, effective social support helps them become contributing members of society again. When I researched social welfare programs for a school project, I found that providing job training for the homeless significantly increases their employment rate, turning them into active taxpayers.</p>
+            <p><span class="keyword">For these reasons</span>, society must take responsibility for helping the homeless, not just out of sympathy, but as a practical investment for a stable economy.</p>
         </div>
     </div>
 
@@ -160,116 +137,4 @@
             <p>I believe painful memories are important for personal growth and should not be erased, even if technology allows it. I have three reasons for my opinion.</p>
             <p><span class="keyword">First of all</span>, painful memories act as a warning system that prevents us from repeating mistakes. For example, the painful memory of failing my math midterm last year forced me to change my study habits completely.</p>
             <p><span class="keyword">Moreover</span>, overcoming past trauma builds psychological resilience. Facing difficult emotions makes us mentally stronger and better prepared for future hardships.</p>
-            <p><span class="keyword">Lastly</span>, shared pain connects human beings. Because I have experienced the sadness of losing a pet, I can deeply empathize with and comfort my friends when they go through similar losses.</p>
-            <p><span class="keyword">For these reasons</span>, instead of artificially erasing our pain, we should embrace it as a crucial stepping stone for maturity and empathy.</p>
-        </div>
-    </div>
-
-    <div class="card" data-id="q6">
-        <div class="card-header">
-            <div class="question-title">[ Question 6 ] 행복한 삶: 좋은 기억 vs 나쁜 기억</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>For a happy life, I believe remembering positive experiences is more important than merely forgetting negative ones. There are three reasons for this.</p>
-            <p><span class="keyword">First of all</span>, positive memories provide emotional fuel during difficult times. When I am exhausted from late-night studying, recalling the joy of my family's summer vacation gives me the energy to keep going.</p>
-            <p><span class="keyword">Moreover</span>, focusing on good memories actively boosts our daily mental health, whereas constantly trying to suppress or forget bad memories can actually cause more stress.</p>
-            <p><span class="keyword">Lastly</span>, sharing positive experiences strengthens our relationships. Laughing with my friends over funny middle school memories creates a strong bond that brings continuous happiness.</p>
-            <p><span class="keyword">For these reasons</span>, actively cherishing positive moments builds a foundation of joy and resilience that naturally overshadows negative experiences in our lives.</p>
-        </div>
-    </div>
-
-    <div class="card" data-id="q7">
-        <div class="card-header">
-            <div class="question-title">[ Question 7 ] 인간의 기억을 완전히 신뢰할 수 있는가</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>I do not think human memory can be trusted completely. I have three specific reasons based on scientific facts and personal experience.</p>
-            <p><span class="keyword">First of all</span>, our memories are easily distorted by strong emotions. When we are highly stressed or excited, our brain often exaggerates or alters the details of an event.</p>
-            <p><span class="keyword">Moreover</span>, memory naturally decays over time. The longer the time passes, the more our brain fills in missing gaps with imagination rather than facts.</p>
-            <p><span class="keyword">Lastly</span>, human memory is highly susceptible to external suggestions. For instance, I once vividly "remembered" going to a specific amusement park as a toddler, but I later realized I only thought I remembered it because I had seen a photograph of it.</p>
-            <p><span class="keyword">For these reasons</span>, while memory is useful, its vulnerability to emotion, time, and suggestion means we cannot trust it flawlessly.</p>
-        </div>
-    </div>
-
-    <div class="card" data-id="q8">
-        <div class="card-header">
-            <div class="question-title">[ Question 8 ] 가장 좋은 영어 공부 방법</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>I consider reading English books and articles to be the best method of studying English. I support this with three reasons.</p>
-            <p><span class="keyword">First of all</span>, reading allows you to learn vocabulary naturally in context. Instead of memorizing boring word lists, seeing how words are actually used in a story makes them unforgettable.</p>
-            <p><span class="keyword">Moreover</span>, it subconsciously improves your understanding of complex grammar. By reading Harry Potter in English, I naturally internalized sentence structures without studying grammar rulebooks.</p>
-            <p><span class="keyword">Lastly</span>, reading heavily improves comprehension speed, which is crucial for high school exams. The more I read, the faster I can grasp the main idea of long passages on my English tests.</p>
-            <p><span class="keyword">For these reasons</span>, because it improves vocabulary, grammar, and reading speed simultaneously in an enjoyable way, extensive reading is the ultimate study method.</p>
-        </div>
-    </div>
-
-    <div class="card" data-id="q9">
-        <div class="card-header">
-            <div class="question-title">[ Question 9 ] 온라인 수업 vs 전통적 교실 수업</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>I prefer traditional classrooms over online courses because they offer a more comprehensive learning environment. I have three main reasons.</p>
-            <p><span class="keyword">First of all</span>, traditional classrooms provide immediate feedback. When I struggled with a complex math formula, my teacher explained it again on the spot, unlike online courses where I must wait for an email reply.</p>
-            <p><span class="keyword">Moreover</span>, face-to-face learning fosters crucial social skills. Working on group presentations in class taught me how to collaborate, which solitary screen time cannot teach.</p>
-            <p><span class="keyword">Lastly</span>, attending physical classes builds a disciplined routine. During online learning, my concentration plummeted, but the physical act of going to school keeps me focused and motivated.</p>
-            <p><span class="keyword">For these reasons</span>, the immediate support, social growth, and discipline provided by traditional classrooms make them the superior choice for my academic growth.</p>
-        </div>
-    </div>
-
-    <div class="card" data-id="q10">
-        <div class="card-header">
-            <div class="question-title">[ Question 10 ] 학교의 봉사활동 의무화 찬반</div>
-            <button class="edit-btn" onclick="toggleEdit(this)">편집하기</button>
-        </div>
-        <div class="script-text">
-            <p>I believe it is not good for schools to make volunteer work mandatory. I have three reasons to support my opposition.</p>
-            <p><span class="keyword">First of all</span>, making it mandatory destroys the intrinsic meaning of "volunteering." True charity must come from a willing heart, but forcing it turns a meaningful act into a mechanical requirement.</p>
-            <p><span class="keyword">Moreover</span>, it adds unnecessary stress to students. High school students are already overwhelmed with academic workloads and extracurricular activities; forcing community service creates an unfair burden.</p>
-            <p><span class="keyword">Lastly</span>, mandatory participation often leads to poor-quality service. From my experience, students who are forced to clean up a local park simply waste time and do not work hard, which doesn't help the community at all.</p>
-            <p><span class="keyword">For these reasons</span>, schools should encourage voluntary participation through diverse programs rather than strictly enforcing it.</p>
-        </div>
-    </div>
-
-</div>
-
-<script>
-    window.onload = function() {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            const id = card.getAttribute('data-id');
-            const textBox = card.querySelector('.script-text');
-            const savedContent = localStorage.getItem('englishScript_' + id);
-            if (savedContent) {
-                textBox.innerHTML = savedContent;
-            }
-        });
-    };
-
-    function toggleEdit(btn) {
-        const card = btn.closest('.card');
-        const id = card.getAttribute('data-id');
-        const textBox = card.querySelector('.script-text');
-        const isEditing = textBox.getAttribute('contenteditable') === 'true';
-        
-        if (isEditing) {
-            textBox.setAttribute('contenteditable', 'false');
-            btn.textContent = '편집하기';
-            btn.classList.remove('editing');
-            localStorage.setItem('englishScript_' + id, textBox.innerHTML);
-            alert("수정된 내용이 안전하게 저장되었습니다!");
-        } else {
-            textBox.setAttribute('contenteditable', 'true');
-            textBox.focus();
-            btn.textContent = '저장하기';
-            btn.classList.add('editing');
-        }
-    }
-</script>
-
-</body>
-</html>
+            <p><span class="keyword">Lastly</span>, shared pain connects human beings. Because I have experienced the sadness of losing a pet, I can deeply empathize with and comfort my friends when they go through similar losses
